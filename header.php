@@ -10,7 +10,7 @@
    				<li><a href="nosotros.php">Nosotros</a></li>
    				<li><a href="productos.php">Productos</a></li>
                    <li><a href="contacto.php">Contacto</a></li>
-                   <li><a href="login.php">Sign </a></li>
+                   <li><a href="login.php">Sign In</a></li>
    			</ul>
    		</nav>
    	</div>
