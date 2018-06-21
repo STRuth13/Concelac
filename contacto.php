@@ -1,26 +1,4 @@
- 
-<?php
-require 'conexion.php';
-if (isset($_POST['btn'])) {
-    $sql = "INSERT INTO tarea (nombre , direccion, email, mensaje) VALUES (:nombre , :direccion, :email, :mensaje)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':nombre', $_POST['nombre']);
-    $stmt->bindParam(':email', $_POST['direccion']);
-    $stmt->bindParam(':telefono', $_POST['email']);
-    $stmt->bindParam(':celular', $_POST['mensaje']);
 
-    try {
-        if ( $stmt->execute()) {
-           echo "envio";
-        }
-       
-      //die('Successfully created new user');
-    } catch(exception $e) {
-      die ('Sorry there must have been an issue creating your account');
-    }
-  }
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,21 +27,21 @@ if (isset($_POST['btn'])) {
        <div class="contenedor">
            <article id="main-col">
                <h1>Contacto</h1>
-               <form method "POST">
+               <form action "database/contact.php" method "POST">
                    <label>Nombre</label>
-                   <input type="text" name"nombre"  placeholder="Ingresa tu nombre">
+                   <input type="text" name = "nombre"  placeholder="Ingresa tu nombre">
                    <br>
                    <label>Email</label>
-                   <input type="text" name"email" placeholder="Ingresa tu email">
+                   <input type="text" name = "email" placeholder="Ingresa tu email">
                    <br>
                    <label>Telefono</label>
-                   <input type="text" name"telefono" placeholder="Ingresa tu telefono">
+                   <input type="text" name = "telefono" placeholder="Ingresa tu telefono">
                    <br>
                    <label>Celular</label>
-                   <input type="text" name"celular" placeholder="Ingresa tu celular">
+                   <input type="text" name = "celular" placeholder="Ingresa tu celular">
                    <br>
                    <label>Mensaje</label>
-                   <textarea></textarea>
+                   <textarea name = "mensaje" ></textarea>
                    <br>
                    <input type="submit" name = "btn" value="Enviar">
                </form>
