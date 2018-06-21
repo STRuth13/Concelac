@@ -2,7 +2,7 @@ body{
     font: 15px Arial, Helvetica,sans-serif;
     padding: 0;
     margin: 0;
-    background-color:#C3EFF5;
+    background-color:rgb(156, 240, 252);
 }
 /*estilos globales*/
 .contenedor{ 
@@ -14,7 +14,7 @@ ul{
     margin: 0;
     padding:0;
 }
-.botton1{ 
+.boton1{ 
     height: 38px;
     background-color: #e8491d;
     border: 0;
@@ -180,7 +180,8 @@ h5{
        float: none;
        text-align: center;
        width: 100%; 
-}   
+} 
+  
 header { 
     padding-bottom: 20px;
 } 
@@ -198,8 +199,5 @@ header {
 input, textarea { 
     width: 98%;
 }
-
-
-   
 
 }   

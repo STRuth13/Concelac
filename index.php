@@ -30,38 +30,47 @@
    <section id="cabecera">
        <div class="contenedor">
            <h1>Empresa al servicio del cliente</h1>
+<<<<<<< HEAD
             <h5>
                 SUAREZ TORRES RUTH
             </h5>           <p>----------------------------------------------</p>
+=======
+           <p>Productos naturales hechos a base de leche natural de vaca</p>
+>>>>>>> origin/Ruth
        </div>
    </section>
    <section id="boletin">
        <div class="contenedor">
-           <h1>Suscribete a nuestra pagina</h1>
+           <h1>Suscríbete a nuestra página</h1>
            <form>
                <input type="email" name="email" placeholder="Ingrese el email...">
-               <button type="submit" class="boton1">Suscribete</button>
+               <button type="submit" class="boton1">Suscríbete</button>
            </form>
        </div>
    </section>
    <section id="cajas">
        <div class="contenedor">
            <div class="caja">
-               <img src="img/queso.png">
-               <h3>QUESOS</h3>
-               <p>--------------------------.</p>
+               <img src="img/MISION.png">
+               <h3>MISIÓN</h3>
+               <p>Empresa dedicada a la industrialización de productos lácteos mejorando 
+                   la calidad alimenticia para satisfacer el paladar más exigente.</p>
 
            </div>
            <div class="caja">
-                <img src="img/producto.png">
-                <h3>MANJARES</h3>
-                <p>----------------------------------------</p>
+                <img src="img/VISION.png">
+                <h3>VISIÓN</h3>
+                <p>Convertirnos en una empresa reconocida a nivel nacional cumpliendo los estandares de 
+                    calidad exigidos.</p>
  
             </div>
             <div class="caja">
-                    <img src="img/mantequilla.png">
-                    <h3>MANTEQUILLAS</h3>
-                    <p>--------------------------------------</p>
+                    <img src="img/TRABAJO.png">
+                    <h3>TRABAJO</h3>
+                    <p> Trabajamos para mejorar permanentemente las bondades alimenticias y 
+                        naturales de nuestros alimentos.
+
+                        </p>
      
                 </div>
 

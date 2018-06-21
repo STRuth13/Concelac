@@ -1,3 +1,26 @@
+ 
+<?php
+require 'conexion.php';
+if (isset($_POST['btn'])) {
+    $sql = "INSERT INTO tarea (nombre , direccion, email, mensaje) VALUES (:nombre , :direccion, :email, :mensaje)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':nombre', $_POST['nombre']);
+    $stmt->bindParam(':email', $_POST['direccion']);
+    $stmt->bindParam(':telefono', $_POST['email']);
+    $stmt->bindParam(':celular', $_POST['mensaje']);
+
+    try {
+        if ( $stmt->execute()) {
+           echo "envio";
+        }
+       
+      //die('Successfully created new user');
+    } catch(exception $e) {
+      die ('Sorry there must have been an issue creating your account');
+    }
+  }
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +34,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD:contacto.HTML
    <header>
    	<div class="contenedor">
    		<div id="marca">
@@ -26,14 +50,17 @@
    		</nav>
    	</div>
    </header>
+=======
+<?php require_once('header.php'); ?>
+>>>>>>> origin/Ruth:contacto.php
    
    <section id="boletin">
        <div class="contenedor">
         
-           <h1>Suscribete a nuestra pagina</h1>
+           <h1>Suscríbete a nuestra página</h1>
            <form>
                <input type="email" name="email" placeholder="Ingrese el email...">
-               <button type="submit" class="boton1">Suscribete</button>
+               <button type="submit" class="boton1">Suscríbete</button>
            </form>
        </div>
    </section>
@@ -41,9 +68,9 @@
        <div class="contenedor">
            <article id="main-col">
                <h1>Contacto</h1>
-               <form>
+               <form method "POST">
                    <label>Nombre</label>
-                   <input type="text" name"nombre" placeholder="Ingresa tu nombre">
+                   <input type="text" name"nombre"  placeholder="Ingresa tu nombre">
                    <br>
                    <label>Email</label>
                    <input type="text" name"email" placeholder="Ingresa tu email">
@@ -57,7 +84,7 @@
                    <label>Mensaje</label>
                    <textarea></textarea>
                    <br>
-                   <input type="submit" value="Enviar">
+                   <input type="submit" name = "btn" value="Enviar">
                </form>
                
 
@@ -65,7 +92,10 @@
            <aside id="lateral">
                <div class="oscuro">
                    <h3>Que hacemos</h3>
-                   <p>--------------------------------</p>
+                   <p>Empresa dedicada a la industrialización de productos lácteos mejorando la
+                        calidad alimenticia para satisfacer el paladar más exigente. 
+                        Nos preocupamos por mejorar permanentemente 
+                       las bondades alimenticias y naturales de nuestros alimentos.</p>
 
                </div>
 
