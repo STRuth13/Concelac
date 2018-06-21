@@ -1,26 +1,4 @@
- 
-<?php
-require 'conexion.php';
-if (isset($_POST['btn'])) {
-    $sql = "INSERT INTO tarea (nombre , direccion, email, mensaje) VALUES (:nombre , :direccion, :email, :mensaje)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':nombre', $_POST['nombre']);
-    $stmt->bindParam(':email', $_POST['direccion']);
-    $stmt->bindParam(':telefono', $_POST['email']);
-    $stmt->bindParam(':celular', $_POST['mensaje']);
 
-    try {
-        if ( $stmt->execute()) {
-           echo "envio";
-        }
-       
-      //die('Successfully created new user');
-    } catch(exception $e) {
-      die ('Sorry there must have been an issue creating your account');
-    }
-  }
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,26 +12,22 @@ if (isset($_POST['btn'])) {
 </head>
 
 <body>
-<<<<<<< HEAD:contacto.HTML
+    
    <header>
-   	<div class="contenedor">
-   		<div id="marca">
-   			<h1><span class="resaltado">Planta Lechera</span> Concelac</h1>
-   		</div>
-   		<nav>
-   			<ul>
-   				<li><a href="index.html">Inicio </a></li>
-   				<li><a href="nosotros.html">Nosotros</a></li>
+        <div class="contenedor">
+            <div id="marca">
+                <h1><span class="resaltado">Planta Lechera</span> Concelac</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="actual"><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
    				<li><a href="productos.html">Productos</a></li>
-   				<li class="actual"><a href="contacto.html">Contacto</a></li>
-   			</ul>
-   		</nav>
-   	</div>
-   </header>
-=======
-<?php require_once('header.php'); ?>
->>>>>>> origin/Ruth:contacto.php
-   
+   				<li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
    <section id="boletin">
        <div class="contenedor">
         
